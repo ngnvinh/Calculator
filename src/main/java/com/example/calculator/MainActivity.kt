@@ -53,7 +53,8 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-fun power(baseVal: Int, exponentVal: Int): Long {
+fun power(baseVal: Int, exponentVal: Int): Long
+{
     val base = baseVal
     var exponent = exponentVal
     var result: Long = 1
@@ -92,9 +93,7 @@ fun Calculator(modifier: Modifier = Modifier) {
                 
             }
         }
-        Row {
 
-        }
         Row {
             Button(onClick = {
                 if(checkState == 0)
@@ -377,13 +376,12 @@ fun Calculator(modifier: Modifier = Modifier) {
             }
         }
         Row {
-            Button(onClick = {  if(checkState == 0)
-            {
+            Button(onClick = {
                 if(checkState == 0)
                 {
                     if(countFirst == 0)
                     {
-                        firstNumber += 0
+                        firstNumber += 9
                         countFirst++
                     }
                     else
@@ -396,7 +394,7 @@ fun Calculator(modifier: Modifier = Modifier) {
                 {
                     if(countSecond == 0)
                     {
-                        secondNumber += 0
+                        secondNumber += 9
                         countSecond++
                     }
                     else
@@ -405,7 +403,7 @@ fun Calculator(modifier: Modifier = Modifier) {
 
                     }
                 }
-            } }) {
+            }) {
                 Text(text = "0")
             }
         }
@@ -447,7 +445,7 @@ fun Calculator(modifier: Modifier = Modifier) {
                 Text(text = "Clear")
             }
         }
-        
+
 
     }
     
