@@ -7,6 +7,7 @@ import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
@@ -280,10 +281,11 @@ fun Calculator(modifier: Modifier = Modifier) {
             }) {
                 Text(text = "6")
             }
+            
         }
+        
         Row {
-            Button(onClick = {  if(checkState == 0)
-            {
+            Button(onClick = {
                 if(checkState == 0)
                 {
                     if(countFirst == 0)
@@ -310,7 +312,7 @@ fun Calculator(modifier: Modifier = Modifier) {
 
                     }
                 }
-            } }) {
+            }) {
                 Text(text = "7")
             }
             Button(onClick = {
@@ -434,11 +436,21 @@ fun Calculator(modifier: Modifier = Modifier) {
                 Text(text = "=")
             }
         }
-
-
-
+        Row {
+            Button(onClick = {
+                firstNumber = 0
+                secondNumber = 0
+                checkState = 0
+                cal = 0
+                result = 0
+            }) {
+                Text(text = "Clear")
+            }
+        }
+        
 
     }
+    
 }
 
 @Preview(showBackground = true)
